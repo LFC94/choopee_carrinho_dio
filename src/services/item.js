@@ -3,7 +3,9 @@ async function createItem(name, price, quantity) {
     name: name,
     price: price,
     quantity: quantity,
-    subTotal: () => price * quantity,
+    subTotal() {
+      return this.price * this.quantity;
+    },
   };
 }
 
